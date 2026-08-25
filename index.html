@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link rel="preload" href="assets/css/site.css?v=20260824-5" as="style">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Fisco | Auditoria fiscal de ISSQN baseada nas declarações do contribuinte</title>
+  <meta name="description" content="Cruze PGDAS-D, DEFIS, movimentação financeira, NFS-e e escriturações. Encontre divergências e gere a peça fiscal pronta para instruir o processo.">
+  <link rel="canonical" href="https://{{DOMINIO_DO_SITE}}/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260824-5">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tech Fisco">
+  <meta property="og:title" content="Números que não fecham. Apuração que se sustenta.">
+  <meta property="og:description" content="Auditoria fiscal de ISSQN com achados e peças prontos para instruir o processo.">
+  <meta property="og:url" content="https://{{DOMINIO_DO_SITE}}/">
+  <meta property="og:image" content="https://{{DOMINIO_DO_SITE}}/assets/img/og-tech-fisco.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tech Fisco | Auditoria fiscal de ISSQN">
+  <meta name="twitter:description" content="Das declarações do contribuinte à peça fiscal pronta.">
+  <meta name="twitter:image" content="https://{{DOMINIO_DO_SITE}}/assets/img/og-tech-fisco.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://{{DOMINIO_DO_SITE}}/#org","name":"Tech Fisco","url":"https://{{DOMINIO_DO_SITE}}/","logo":{"@type":"ImageObject","url":"https://{{DOMINIO_DO_SITE}}/assets/img/logo-techfisco.png","width":640,"height":358},"description":"Sistema de auditoria fiscal de ISSQN para municípios brasileiros.","areaServed":{"@type":"Country","name":"Brasil"},"knowsLanguage":"pt-BR"},
+    {"@type":"WebSite","@id":"https://{{DOMINIO_DO_SITE}}/#site","url":"https://{{DOMINIO_DO_SITE}}/","name":"Tech Fisco","inLanguage":"pt-BR","publisher":{"@id":"https://{{DOMINIO_DO_SITE}}/#org"}},
+    {"@type":"WebPage","@id":"https://{{DOMINIO_DO_SITE}}/#webpage","url":"https://{{DOMINIO_DO_SITE}}/","name":"Tech Fisco | Auditoria fiscal de ISSQN baseada nas declarações do contribuinte","isPartOf":{"@id":"https://{{DOMINIO_DO_SITE}}/#site"},"inLanguage":"pt-BR","about":{"@id":"https://{{DOMINIO_DO_SITE}}/#software"}},
+    {"@type":"SoftwareApplication","@id":"https://{{DOMINIO_DO_SITE}}/#software","name":"Tech Fisco","applicationCategory":"BusinessApplication","applicationSubCategory":"Auditoria fiscal municipal","operatingSystem":"Servidor sob custódia do município","url":"https://{{DOMINIO_DO_SITE}}/","inLanguage":"pt-BR","publisher":{"@id":"https://{{DOMINIO_DO_SITE}}/#org"},"description":"Sistema de auditoria fiscal de ISSQN que cruza PGDAS-D, DEFIS, NFS-e, movimentação financeira e escriturações contábeis e fiscais, prioriza achados investigativos e gera peças fiscais para revisão do auditor.","featureList":["Cruzamento do Simples Nacional entre PGDAS-D, DEFIS, movimentação financeira e NFS-e","Dez regras investigativas com fundamento e explicações legítimas a verificar","Memória de cálculo reconstituível por exercício","Geração de termo, relatório de ação fiscal, parecer e auto de infração","Operação sob custódia municipal, sem telemetria e sem serviços externos"],"audience":{"@type":"Audience","audienceType":"Auditores fiscais e Secretarias Municipais de Fazenda"}}
+  ]}
+  </script>
+  <script src="assets/js/site.js?v=20260824-3" defer></script>
+
+  <meta name="theme-color" content="#0f2747">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Tech Fisco">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Cartão do Tech Fisco: números que não fecham, apuração que se sustenta.">
+  <meta name="twitter:image:alt" content="Cartão do Tech Fisco: auditoria fiscal de ISSQN para municípios.">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que é o Tech Fisco?","acceptedAnswer":{"@type":"Answer","text":"É um sistema de auditoria fiscal de ISSQN para municípios. Ele importa as declarações e escriturações que a fiscalização já recebe — PGDAS-D, DEFIS, NFS-e, ECD, ECF, EFD, extratos bancários e CT-e —, cruza essas fontes por exercício, aponta onde os valores não fecham e redige a peça fiscal correspondente para revisão do auditor."}},{"@type":"Question","name":"Como funciona o cruzamento do PGDAS-D com a DEFIS e a NFS-e?","acceptedAnswer":{"@type":"Answer","text":"Para cada exercício o sistema compara a receita declarada no PGDAS-D com três candidatos: a despesa considerada na DEFIS (folha, compras e despesas), a movimentação financeira creditada em conta e a receita documentada em NFS-e ou escrita fiscal. O maior candidato válido é registrado, a base aferida é calculada e o fundamento que sustentou o resultado fica gravado na memória de cálculo. Ver o cruzamento do Simples Nacional em detalhe ."}},{"@type":"Question","name":"O município pode fiscalizar empresa optante pelo Simples Nacional?","acceptedAnswer":{"@type":"Answer","text":"Sim. A competência de fiscalizar o ISS devido por optante do Simples Nacional é do ente municipal, nos termos da Lei Complementar 123/2006. O Tech Fisco organiza a evidência e a fundamentação desse trabalho; a qualificação do fato, a decisão de lançar e a condução do procedimento permanecem com a autoridade fiscal competente."}},{"@type":"Question","name":"Os dados fiscais saem da prefeitura?","acceptedAnswer":{"@type":"Answer","text":"Não. A aplicação roda sob custódia municipal: não depende de CDN, não usa telemetria e não envia os arquivos fiscais para serviços externos processarem. O município controla o servidor, o armazenamento e os perfis de acesso, o que reduz a circulação de informação protegida pelo art. 198 do CTN e facilita o desenho de controles compatíveis com a LGPD. Entender a arquitetura de custódia ."}},{"@type":"Question","name":"O sistema emite auto de infração automaticamente?","acceptedAnswer":{"@type":"Answer","text":"Não. Nenhuma regra gera autuação automática. O sistema produz indícios priorizados, cada um acompanhado do critério técnico, da repercussão no ISS, do fundamento e das explicações legítimas que precisam ser afastadas antes de qualquer lançamento. As peças — termo, relatório, parecer e auto — nascem redigidas, mas só valem depois da revisão e da assinatura do auditor."}},{"@type":"Question","name":"Que arquivos o município precisa ter para começar?","acceptedAnswer":{"@type":"Answer","text":"O suficiente para o primeiro cruzamento costuma ser PGDAS-D e DEFIS do contribuinte, mais NFS-e do período. Extrato bancário, ECD, ECF, EFD e CT-e ampliam o alcance das regras investigativas, mas não são pré-requisito para ver o mecanismo funcionando. Ver a sequência operacional completa ."}},{"@type":"Question","name":"Qual infraestrutura a prefeitura precisa manter?","acceptedAnswer":{"@type":"Answer","text":"Um servidor dimensionado para processar arquivos de ECD, armazenamento persistente e protegido, rede com TLS e perfis de acesso definidos, além de políticas explícitas de retenção, descarte, operação e atualização. Os requisitos estão descritos na página de segurança para que a equipe de TI possa avaliá-los antes da conversa comercial."}},{"@type":"Question","name":"Dá para testar antes de contratar?","acceptedAnswer":{"@type":"Answer","text":"Sim. O ambiente de treinamento permite percorrer todo o fluxo — importação, cruzamento, fila de achados e emissão de peça — com dados fictícios, sem instalação e sem enviar nenhum arquivo de contribuinte real."}}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tech Fisco — página inicial" aria-current="page">
+        <img src="assets/img/logo-techfisco.png" alt="Tech Fisco" width="640" height="358" fetchpriority="high">
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span><span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="como-funciona.html">Como funciona</a></li>
+          <li><a href="simples-nacional.html">Simples Nacional</a></li>
+          <li><a href="regras.html">Regras</a></li>
+          <li><a href="seguranca.html">Segurança</a></li>
+          <li><a href="auditor.html">Para o auditor</a></li>
+          <li><a href="secretaria.html">Para a secretaria</a></li>
+          <li><a class="nav-cta" href="contato.html">Falar com a equipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Auditoria fiscal de ISSQN para municípios</p>
+          <h1 id="hero-title">A receita pode estar menor no PGDAS-D. O problema é encontrar onde — e provar.</h1>
+          <p class="lead">O Tech Fisco lê as declarações que o próprio contribuinte entregou, cruza umas com as outras, aponta onde os números não fecham e entrega a peça fiscal pronta.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="https://techfisco.up.railway.app/login" target="_blank" rel="noopener">Ver o cruzamento funcionando<span class="ext-mark" aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+            <a class="btn btn--secondary" href="contato.html">Falar com nossa equipe</a>
+          </div>
+          <p class="action-note">Ambiente de treinamento com dados fictícios. Sem instalação e sem enviar arquivo de contribuinte.</p>
+          <div class="trust-line" role="list" aria-label="Diferenciais verificados">
+            <span role="listitem">Dados sob custódia municipal</span>
+            <span role="listitem">945 testes automatizados</span>
+            <span role="listitem">Peças fiscais geradas pelo sistema</span>
+          </div>
+        </div>
+        <aside class="hero-evidence" aria-label="Fontes confrontadas no cruzamento">
+          <span class="hero-evidence__label">Um exercício. Quatro leituras.</span>
+          <h2 id="o-numero-declarado-precisa-fechar-com-o-restante">O número declarado precisa fechar com o restante.</h2>
+          <ul class="evidence-list">
+            <li><strong>PGDAS-D</strong>Receita informada ao Simples Nacional.</li>
+            <li><strong>DEFIS</strong>Folha, compras e despesas declaradas.</li>
+            <li><strong>Movimentação financeira</strong>Créditos que entraram nas contas.</li>
+            <li><strong>NFS-e</strong>Serviços efetivamente documentados.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problema-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Por que a fiscalização de ISS perde base de cálculo</p>
+          <h2 id="problema-title">A informação existe. O cruzamento costuma chegar tarde.</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card problem-card">
+            <span class="card-kicker">Base subdeclarada</span>
+            <h3>O PGDAS-D diz uma coisa. A despesa, o banco ou a NFS-e dizem outra.</h3>
+            <p>Sem colocar as fontes lado a lado por exercício, a diferença fica espalhada entre arquivos que já estavam disponíveis para a fiscalização.</p>
+          </article>
+          <article class="card problem-card">
+            <span class="card-kicker">Trabalho manual</span>
+            <h3>O auditor precisa transformar planilhas diferentes em uma linha de raciocínio.</h3>
+            <p>Selecionar colunas, somar competências, conferir CNPJ e reconstruir lançamentos consome o tempo que deveria estar na análise fiscal.</p>
+          </article>
+          <article class="card problem-card">
+            <span class="card-kicker">Processo vulnerável</span>
+            <h3>Um valor sem memória de cálculo e fundamento não basta.</h3>
+            <p>Quando a apuração não registra a fonte, o critério e as explicações que foram afastadas, a peça nasce com lacunas difíceis de corrigir depois.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="fluxo-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Como funciona a auditoria fiscal de ISSQN</p>
+          <h2 id="fluxo-title">Quatro etapas. Cada conclusão deixa rastro.</h2>
+          <p>O auditor continua decidindo. O sistema organiza a evidência, apresenta o critério e redige a saída para revisão.</p>
+        </div>
+        <div class="flow-diagram" tabindex="0" role="region" aria-label="Diagrama do fluxo de auditoria; use as setas para rolar horizontalmente se necessário">
+          <svg viewBox="0 0 1040 240" role="img" aria-labelledby="flow-svg-title flow-svg-desc">
+            <title id="flow-svg-title">Fluxo completo do Tech Fisco</title>
+            <desc id="flow-svg-desc">Importar declarações, cruzar dados, priorizar achados e gerar a peça fiscal</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#07805e"/></marker>
+            </defs>
+            <g font-family="Segoe UI,Arial,sans-serif">
+              <path d="M235 120h58M495 120h58M755 120h58" stroke="#07805e" stroke-width="5" marker-end="url(#arrow)"/>
+              <g transform="translate(20 25)"><rect width="215" height="190" rx="14" fill="#fff" stroke="#8798ae"/><circle cx="42" cy="42" r="23" fill="#0f2747"/><text x="42" y="50" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">1</text><text x="24" y="91" fill="#0f2747" font-size="20" font-weight="800">Importar</text><text x="24" y="121" fill="#40536b" font-size="15">ECD, ECF, EFD,</text><text x="24" y="144" fill="#40536b" font-size="15">PGDAS-D, DEFIS,</text><text x="24" y="167" fill="#40536b" font-size="15">NFS-e, banco e CT-e</text></g>
+              <g transform="translate(280 25)"><rect width="215" height="190" rx="14" fill="#fff" stroke="#8798ae"/><circle cx="42" cy="42" r="23" fill="#0f2747"/><text x="42" y="50" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">2</text><text x="24" y="91" fill="#0f2747" font-size="20" font-weight="800">Cruzar</text><text x="24" y="121" fill="#40536b" font-size="15">O sistema compara</text><text x="24" y="144" fill="#40536b" font-size="15">fontes e registra</text><text x="24" y="167" fill="#40536b" font-size="15">a memória de cálculo</text></g>
+              <g transform="translate(540 25)"><rect width="215" height="190" rx="14" fill="#fff" stroke="#8798ae"/><circle cx="42" cy="42" r="23" fill="#0f2747"/><text x="42" y="50" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">3</text><text x="24" y="91" fill="#0f2747" font-size="20" font-weight="800">Investigar</text><text x="24" y="121" fill="#40536b" font-size="15">Achados priorizados,</text><text x="24" y="144" fill="#40536b" font-size="15">com hipóteses que</text><text x="24" y="167" fill="#40536b" font-size="15">precisam ser afastadas</text></g>
+              <g transform="translate(800 25)"><rect width="215" height="190" rx="14" fill="#fff" stroke="#8798ae"/><circle cx="42" cy="42" r="23" fill="#07805e"/><text x="42" y="50" text-anchor="middle" fill="#fff" font-size="23" font-weight="800">4</text><text x="24" y="91" fill="#0f2747" font-size="20" font-weight="800">Formalizar</text><text x="24" y="121" fill="#40536b" font-size="15">Termo, relatório,</text><text x="24" y="144" fill="#40536b" font-size="15">parecer e auto para</text><text x="24" y="167" fill="#40536b" font-size="15">revisão do auditor</text></g>
+            </g>
+          </svg>
+        </div>
+        <p class="legal-note">O Tech Fisco produz indícios e documentos de apoio. A qualificação do fato, a decisão de lançar e a condução do procedimento permanecem com a autoridade fiscal competente.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sn-title">
+      <div class="container">
+        <div class="split-panel">
+          <div class="split-panel__intro">
+            <p class="eyebrow">Cruzamento do Simples Nacional</p>
+            <h2 id="sn-title">A maior base encontrada fica visível — e fundamentada.</h2>
+            <p>Para cada exercício, o sistema compara a receita do PGDAS-D com três candidatos. Registra o maior, calcula a base aferida e mostra qual fundamento sustentou o resultado.</p>
+            <a class="btn btn--light" href="simples-nacional.html">Ver o cruzamento completo</a>
+          </div>
+          <div class="split-panel__body">
+            <div class="abc-grid">
+              <article class="abc-item"><span class="abc-item__letter">A</span><h3>Despesa considerada</h3><p>Folha + compras + despesas declaradas na DEFIS.</p></article>
+              <article class="abc-item"><span class="abc-item__letter">B</span><h3>Movimentação financeira</h3><p>Créditos bancários confrontados com a receita.</p></article>
+              <article class="abc-item"><span class="abc-item__letter">C</span><h3>Escrita fiscal / NFS-e</h3><p>Notas de serviço emitidas no exercício.</p></article>
+            </div>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Exemplo fictício do cruzamento do Simples Nacional">
+              <table>
+                <caption class="visually-hidden">Valores fictícios para demonstrar a seleção da maior base</caption>
+                <thead><tr><th>Exercício</th><th>PGDAS-D</th><th>A · Despesa</th><th>B · Banco</th><th>C · NFS-e</th><th>Maior candidato</th></tr></thead>
+                <tbody><tr><td>2024 <span class="fiction-label">Fictício</span></td><td>R$ 820.000</td><td>R$ 910.000</td><td class="cell-alert">R$ 1.180.000</td><td>R$ 965.000</td><td><strong>B · Banco</strong></td></tr></tbody>
+              </table>
+            </div>
+            <p class="legal-note">Exemplo exclusivamente ilustrativo. Não representa resultado obtido por contribuinte ou município real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="regras-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Dossiê investigativo · malha fiscal do ISSQN</p>
+          <h2 id="regras-title">Dez regras para abrir a investigação pelo ponto certo.</h2>
+          <p>Cada achado traz critério técnico, repercussão no ISS, fundamento, providências e explicações legítimas a verificar antes de qualquer autuação.</p>
+        </div>
+        <div class="grid grid--5">
+          <article class="card rule-card"><span class="rule-number">01</span><h3>ISS retido pelo tomador</h3><p>Declaração de terceiro sem contrapartida no contribuinte.</p></article>
+          <article class="card rule-card"><span class="rule-number">02</span><h3>Receita × NFS-e</h3><p>Receita contábil que não fecha com as notas emitidas.</p></article>
+          <article class="card rule-card"><span class="rule-number">03</span><h3>Crédito sem lastro</h3><p>Entrada bancária sem origem identificada.</p></article>
+          <article class="card rule-card"><span class="rule-number">04</span><h3>Entrada sem receita</h3><p>Ingresso sem registro correspondente de receita.</p></article>
+          <article class="card rule-card"><span class="rule-number">05</span><h3>Caixa credor</h3><p>Saldo negativo de caixa: impossibilidade material.</p></article>
+          <article class="card rule-card"><span class="rule-number">06</span><h3>Importação de serviço</h3><p>Serviço tomado do exterior sem recolhimento.</p></article>
+          <article class="card rule-card"><span class="rule-number">07</span><h3>Passivo contra PL</h3><p>Baixa de obrigação sem passagem pela receita.</p></article>
+          <article class="card rule-card"><span class="rule-number">08</span><h3>I050 × I051</h3><p>Conta inconsistente com o plano referencial.</p></article>
+          <article class="card rule-card"><span class="rule-number">09</span><h3>Passivo contra despesa</h3><p>Receita disfarçada em dois lançamentos.</p></article>
+          <article class="card rule-card"><span class="rule-number">10</span><h3>Receita contra despesa</h3><p>Receita anulada contra despesa no mesmo lote.</p></article>
+        </div>
+        <p class="mt-2"><a class="btn btn--secondary" href="regras.html">Examinar as 10 regras</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="custodia-title">
+      <div class="container">
+        <div class="security-band">
+          <div class="security-band__content">
+            <p class="eyebrow eyebrow--light">Sigilo fiscal, LGPD e custódia municipal</p>
+            <h2 id="custodia-title">Os dados não saem da prefeitura.</h2>
+            <p>A aplicação não depende de CDN, não usa telemetria e não chama serviços externos para processar os arquivos fiscais. A prefeitura controla o ambiente, o armazenamento e o acesso.</p>
+            <p>Isso reduz a circulação de informação protegida pelo art. 198 do CTN e ajuda o município a definir controles compatíveis com a LGPD.</p>
+            <a class="btn btn--light" href="seguranca.html">Entender a arquitetura de custódia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="publico-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Para o auditor fiscal e para a secretaria de fazenda</p>
+          <h2 id="publico-title">Veja o Tech Fisco pelo problema que você precisa resolver.</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="card audience-card">
+            <span class="card-kicker">Trabalho individual</span>
+            <h3>Sou auditor fiscal</h3>
+            <p>Quero reduzir o retrabalho da apuração, abrir o achado já contextualizado e sair da análise com a peça redigida para revisão.</p>
+            <a class="text-link" href="auditor.html">Ver a rotina do auditor →</a>
+          </article>
+          <article class="card audience-card">
+            <span class="card-kicker">Gestão da fiscalização</span>
+            <h3>Represento uma secretaria</h3>
+            <p>Quero ampliar a capacidade de análise, padronizar a fundamentação, preservar a custódia do dado e acompanhar uma trilha reconstituível.</p>
+            <a class="text-link" href="secretaria.html">Ver a visão da secretaria →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="prova-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Evidência de campo</p>
+          <h2 id="prova-title">A estrutura está pronta. A prova precisa ser real.</h2>
+          <p>Esta área receberá casos autorizados, identificáveis e documentados antes da publicação.</p>
+        </div>
+        <div class="grid grid--3">
+          <!-- Substituir por resultado verificável, com período, método e autorização expressa do município. -->
+          <article class="proof-placeholder"><h3>Resultado verificável</h3><code>{{PROVA_A_PREENCHER}}</code><p>Resultado real, sem promessa de desempenho futuro.</p></article>
+          <!-- Substituir apenas por depoimento real, autorizado e atribuível. -->
+          <article class="proof-placeholder"><h3>Relato de quem usa</h3><code>{{DEPOIMENTO_A_PREENCHER}}</code><p>Depoimento real de auditor ou gestor, com nome e cargo autorizados.</p></article>
+          <!-- Substituir apenas por nome/logotipo de ente público com autorização de uso. -->
+          <article class="proof-placeholder"><h3>Referência institucional</h3><code>{{MUNICIPIO_CLIENTE_A_PREENCHER}}</code><p>Referência autorizada, sem selo ou certificação inventados.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <p class="eyebrow">Perguntas frequentes</p>
+          <h2 id="faq-title">O que a secretaria costuma perguntar antes da primeira conversa.</h2>
+        </div>
+        <div class="details-group" data-accordion-group>
+          <details>
+            <summary>O que é o Tech Fisco?</summary>
+            <div class="details-body">
+              <p>É um sistema de auditoria fiscal de ISSQN para municípios. Ele importa as declarações e escriturações que a fiscalização já recebe — PGDAS-D, DEFIS, NFS-e, ECD, ECF, EFD, extratos bancários e CT-e —, cruza essas fontes por exercício, aponta onde os valores não fecham e redige a peça fiscal correspondente para revisão do auditor.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Como funciona o cruzamento do PGDAS-D com a DEFIS e a NFS-e?</summary>
+            <div class="details-body">
+              <p>Para cada exercício o sistema compara a receita declarada no PGDAS-D com três candidatos: a despesa considerada na DEFIS (folha, compras e despesas), a movimentação financeira creditada em conta e a receita documentada em NFS-e ou escrita fiscal. O maior candidato válido é registrado, a base aferida é calculada e o fundamento que sustentou o resultado fica gravado na memória de cálculo.</p>
+              <p><a href="simples-nacional.html">Ver o cruzamento do Simples Nacional em detalhe</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>O município pode fiscalizar empresa optante pelo Simples Nacional?</summary>
+            <div class="details-body">
+              <p>Sim. A competência de fiscalizar o ISS devido por optante do Simples Nacional é do ente municipal, nos termos da Lei Complementar 123/2006. O Tech Fisco organiza a evidência e a fundamentação desse trabalho; a qualificação do fato, a decisão de lançar e a condução do procedimento permanecem com a autoridade fiscal competente.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Os dados fiscais saem da prefeitura?</summary>
+            <div class="details-body">
+              <p>Não. A aplicação roda sob custódia municipal: não depende de CDN, não usa telemetria e não envia os arquivos fiscais para serviços externos processarem. O município controla o servidor, o armazenamento e os perfis de acesso, o que reduz a circulação de informação protegida pelo art. 198 do CTN e facilita o desenho de controles compatíveis com a LGPD.</p>
+              <p><a href="seguranca.html">Entender a arquitetura de custódia</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>O sistema emite auto de infração automaticamente?</summary>
+            <div class="details-body">
+              <p>Não. Nenhuma regra gera autuação automática. O sistema produz indícios priorizados, cada um acompanhado do critério técnico, da repercussão no ISS, do fundamento e das explicações legítimas que precisam ser afastadas antes de qualquer lançamento. As peças — termo, relatório, parecer e auto — nascem redigidas, mas só valem depois da revisão e da assinatura do auditor.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Que arquivos o município precisa ter para começar?</summary>
+            <div class="details-body">
+              <p>O suficiente para o primeiro cruzamento costuma ser PGDAS-D e DEFIS do contribuinte, mais NFS-e do período. Extrato bancário, ECD, ECF, EFD e CT-e ampliam o alcance das regras investigativas, mas não são pré-requisito para ver o mecanismo funcionando.</p>
+              <p><a href="como-funciona.html">Ver a sequência operacional completa</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Qual infraestrutura a prefeitura precisa manter?</summary>
+            <div class="details-body">
+              <p>Um servidor dimensionado para processar arquivos de ECD, armazenamento persistente e protegido, rede com TLS e perfis de acesso definidos, além de políticas explícitas de retenção, descarte, operação e atualização. Os requisitos estão descritos na página de segurança para que a equipe de TI possa avaliá-los antes da conversa comercial.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Dá para testar antes de contratar?</summary>
+            <div class="details-body">
+              <p>Sim. O ambiente de treinamento permite percorrer todo o fluxo — importação, cruzamento, fila de achados e emissão de peça — com dados fictícios, sem instalação e sem enviar nenhum arquivo de contribuinte real.</p>
+            </div>
+          </details>
+        </div>
+        <p class="legal-note">As respostas descrevem o funcionamento do sistema. Não constituem orientação jurídica nem substituem a análise da procuradoria e da autoridade fiscal do município.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Leve um conjunto de arquivos reais da rotina. Veja o cruzamento acontecer.</h2>
+        <p>A conversa começa pelas fontes que o município já recebe e pelo procedimento que precisa instruir.</p>
+        <div class="cta-actions">
+          <a class="btn btn--light" href="contato.html">Agendar uma conversa</a>
+          <a class="btn btn--ghost-light" href="como-funciona.html">Ver o fluxo completo</a>
+        </div>
+        <p class="legal-note">A ferramenta apoia a investigação e a instrução. Não substitui o juízo técnico da autoridade fiscal nem garante a confirmação do indício ou o resultado de eventual lançamento.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/img/logo-techfisco.png" alt="Tech Fisco" width="640" height="358" loading="lazy"><p>Auditoria fiscal de ISSQN com base nas declarações e escriturações que já existem.</p></div>
+        <nav class="footer-nav" aria-label="Produto"><p class="footer-nav__title">Produto</p><ul><li><a href="como-funciona.html">Como funciona</a></li><li><a href="simples-nacional.html">Simples Nacional</a></li><li><a href="regras.html">Regras investigativas</a></li><li><a href="seguranca.html">Segurança</a></li></ul></nav>
+        <nav class="footer-nav" aria-label="Próximos passos"><p class="footer-nav__title">Próximos passos</p><ul><li><a href="auditor.html">Para o auditor</a></li><li><a href="secretaria.html">Para a secretaria</a></li><li><a href="contato.html">Falar com a equipe</a></li></ul><a class="footer-training" href="https://techfisco.up.railway.app/login" target="_blank" rel="noopener">Ambiente de treinamento ↗</a></nav>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Tech Fisco.</span><span>O resultado fiscal depende da análise e da decisão da autoridade competente.</span></div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#conteudo" data-to-top aria-label="Voltar ao topo da página"><span aria-hidden="true">↑</span></a>
+  <div class="mobile-cta" data-mobile-cta>
+    <a class="btn btn--secondary" href="https://techfisco.up.railway.app/login" target="_blank" rel="noopener">Ver demonstração<span class="ext-mark" aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+    <a class="btn btn--primary" href="contato.html">Falar com a equipe</a>
+  </div>
+</body>
+</html>

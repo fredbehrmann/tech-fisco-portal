@@ -1,0 +1,54 @@
+# Publicacao no GitHub Pages -- DESATIVADA.
+# Hoje so roda se voce clicar em "Run workflow" na aba Actions.
+# Instrucoes completas de ativacao no README, secao "GitHub".
+name: Publicar no GitHub Pages
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Falhar se restar algum placeholder
+        run: |
+          if grep -rn --include='*.html' --include='*.xml' --include='*.txt' --include='*.webmanifest' -E '\{\{[A-Z0-9_]+\}\}' .; then
+            echo "::error::Ha placeholders nao resolvidos. Veja a lista acima."
+            exit 1
+          fi
+          echo "Nenhum placeholder pendente."
+      - name: Conferir um H1 por pagina
+        run: |
+          erro=0
+          for f in *.html; do
+            n=$(grep -c '<h1' "$f")
+            echo "$f: $n H1"
+            if [ "$n" -ne 1 ]; then echo "::error file=$f::esperado 1 H1, encontrado $n"; erro=1; fi
+          done
+          exit $erro
+  publicar:
+    needs: verificar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar artefato
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_backup-pre-refatoracao' --exclude 'servir.command' ./ _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

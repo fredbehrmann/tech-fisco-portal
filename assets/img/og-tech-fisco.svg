@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Tech Fisco — números que não fecham, apuração que se sustenta</title>
+  <desc id="og-desc">Cartão institucional do Tech Fisco em azul-marinho, verde e branco</desc>
+
+  <rect width="1200" height="630" fill="#eef2f7"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#07805e"/>
+
+  <!-- Malha discreta, ecoando o hero do site -->
+  <g stroke="#0f2747" stroke-opacity=".05" stroke-width="1">
+    <path d="M0 110h1200M0 200h1200M0 290h1200M0 380h1200M0 470h1200M0 560h1200"/>
+    <path d="M120 14v616M240 14v616M360 14v616M480 14v616M600 14v616M720 14v616M840 14v616M960 14v616M1080 14v616"/>
+  </g>
+
+  <!-- Marca d'água à direita: fica atrás do texto e não o corta -->
+  <g opacity=".5">
+    <circle cx="1000" cy="330" r="172" fill="none" stroke="#d2dde9" stroke-width="46"/>
+    <path d="M946 334l40 40 84-94" fill="none" stroke="#07805e" stroke-opacity=".55" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Marca -->
+  <g>
+    <rect x="72" y="72" width="80" height="80" rx="19" fill="#0f2747"/>
+    <path d="M94 97h38M94 113h28M94 129h18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="130" cy="129" r="12" fill="#07805e" stroke="#fff" stroke-width="3.5"/>
+    <path d="M138 137l11 11" fill="none" stroke="#07805e" stroke-width="6" stroke-linecap="round"/>
+    <text x="170" y="122" fill="#0f2747" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="3.5">TECH FISCO</text>
+  </g>
+
+  <!-- Título: 48px em Arial cabe em 720px de largura útil,
+       margem de segurança para qualquer fonte de fallback -->
+  <text x="72" y="270" fill="#0f2747" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.5">Números que não fecham.</text>
+  <text x="72" y="336" fill="#0f2747" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.5">Apuração que se sustenta.</text>
+
+  <text x="72" y="398" fill="#40536b" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24">Auditoria fiscal de ISSQN para municípios.</text>
+  <text x="72" y="432" fill="#40536b" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24">Achados e peças prontos para instruir o processo.</text>
+
+  <rect x="72" y="486" width="424" height="56" rx="10" fill="#07805e"/>
+  <text x="98" y="521" fill="#ffffff" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700">Declaração → achado → peça fiscal</text>
+</svg>

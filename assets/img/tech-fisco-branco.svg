@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 84" role="img" aria-labelledby="logo-b-title logo-b-desc">
+  <title id="logo-b-title">Tech Fisco</title>
+  <desc id="logo-b-desc">Marca do sistema de auditoria fiscal municipal, versão para fundo escuro</desc>
+  <rect x="2" y="2" width="80" height="80" rx="18" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <path d="M23 27h38M23 42h28M23 57h18" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="60" cy="57" r="12" fill="none" stroke="#9ce3ce" stroke-width="5"/>
+  <path d="M69 67l9 9" fill="none" stroke="#9ce3ce" stroke-width="6" stroke-linecap="round"/>
+  <text x="101" y="39" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="800">Tech</text>
+  <text x="101" y="69" fill="#9ce3ce" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="800">Fisco</text>
+</svg>

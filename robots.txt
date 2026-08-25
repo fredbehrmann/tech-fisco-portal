@@ -1,0 +1,7 @@
+# Substituir {{DOMINIO_DO_SITE}} antes da publicação.
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://{{DOMINIO_DO_SITE}}/sitemap.xml

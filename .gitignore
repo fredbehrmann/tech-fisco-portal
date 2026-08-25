@@ -1,0 +1,27 @@
+# Backup da refatoração de agosto/2026.
+# Fica no disco local como rede de segurança, mas não entra no histórico:
+# o Git já é o mecanismo de reversão a partir daqui.
+_backup-pre-refatoracao/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs e temporários de servidor local
+*.log
+.cache/
