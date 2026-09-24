@@ -157,7 +157,6 @@
   form.noValidate = true;
   var summary = document.getElementById("error-summary");
   var status = document.getElementById("form-status");
-  var submitButton = form.querySelector("button[type='submit']");
 
   var rules = {
     nome: function (value) { return value.trim().length >= 2 ? "" : "Informe seu nome."; },
@@ -238,7 +237,7 @@
     if (kind) status.focus();
   }
 
-  form.addEventListener("submit", async function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     setStatus("", "");
 
@@ -257,34 +256,28 @@
       return;
     }
 
-    var endpoint = form.getAttribute("data-endpoint") || "";
-    if (!endpoint || endpoint.indexOf("{{") !== -1) {
-      setStatus("error", "O formulário está validado, mas o endpoint de envio ainda precisa ser configurado pela equipe responsável.");
+    var recipient = (form.getAttribute("data-recipient") || "").trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) {
+      setStatus("error", "O endereço de contato não está configurado corretamente.");
       return;
     }
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Enviando…";
+    var porte = form.elements.porte;
+    var porteLabel = porte.options[porte.selectedIndex].text;
+    var subject = "Contato pelo site Tech Fisco — " + form.elements.municipio.value.trim() + "/" + form.elements.uf.value.trim();
+    var body = [
+      "Nome: " + form.elements.nome.value.trim(),
+      "E-mail: " + form.elements.email.value.trim(),
+      "Município: " + form.elements.municipio.value.trim(),
+      "UF: " + form.elements.uf.value.trim(),
+      "Cargo ou função: " + (form.elements.cargo.value.trim() || "Não informado"),
+      "Porte do município: " + porteLabel,
+      "",
+      "Mensagem:",
+      form.elements.mensagem.value.trim()
+    ].join("\n");
 
-    try {
-      var response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: new FormData(form)
-      });
-      if (!response.ok) throw new Error("Resposta inválida");
-      form.reset();
-      form.querySelectorAll("[aria-invalid]").forEach(function (field) {
-        field.setAttribute("aria-invalid", "false");
-      });
-      form.querySelectorAll(".field-error").forEach(function (el) { el.textContent = ""; });
-      showSummary([]);
-      setStatus("success", "Mensagem enviada. Nossa equipe entrará em contato pelos dados informados.");
-    } catch (error) {
-      setStatus("error", "Não foi possível enviar agora. Tente novamente mais tarde ou peça à equipe responsável para conferir o endpoint do formulário.");
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "Enviar mensagem";
-    }
+    setStatus("success", "O aplicativo de e-mail será aberto. Revise a mensagem e selecione Enviar para concluir o contato.");
+    window.location.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   });
 })();

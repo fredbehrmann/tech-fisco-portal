@@ -45,18 +45,17 @@ Todos os placeholders usam chaves duplas e podem ser localizados com uma busca g
 | Placeholder | Onde aparece | O que inserir |
 |---|---|---|
 | `{{DOMINIO_DO_SITE}}` | Metadados das 8 páginas, `robots.txt` e `sitemap.xml` | Domínio canônico sem protocolo e sem barra final, por exemplo `www.exemplo.gov.br` |
-| `{{ENDPOINT_FORMULARIO}}` | `contato.html` | Endpoint HTTPS autorizado a receber o formulário por `POST`. O campo `populacao` foi substituído por `porte` (faixas); ajuste o destino conforme isso. |
 | `{{PROVA_A_PREENCHER}}` | Home e página da secretaria | Resultado real, verificável, com método, período e autorização; nunca uma promessa futura |
 | `{{DEPOIMENTO_A_PREENCHER}}` | Home e página da secretaria | Depoimento real, atribuível e autorizado |
 | `{{MUNICIPIO_CLIENTE_A_PREENCHER}}` | Home e página da secretaria | Nome ou marca institucional somente com autorização de uso |
 
-Até que o endpoint seja configurado, o formulário valida os campos e apresenta um erro de configuração legível. Depois da troca, respostas HTTP bem-sucedidas exibem o estado de sucesso; falhas de rede ou servidor exibem o estado de erro.
+O formulário de contato está configurado para preparar uma mensagem destinada a `fredissimo@gmail.com`. O navegador abre o aplicativo de e-mail do visitante com assunto e corpo preenchidos; o usuário ainda precisa revisar e selecionar **Enviar**. Sem JavaScript, o formulário conserva a validação nativa e usa a ação `mailto:` diretamente.
 
 ## Onde ajustar o texto comercial
 
 - `index.html`: promessa principal, três dores, visão geral do produto, bifurcação de público e prova social.
 - `simples-nacional.html`: fundamentos A/B/C, exemplo fictício, linhas A–K e fac-símile do termo.
-- `regras.html`: descrição pública das dez regras e hipóteses legítimas a verificar.
+- `regras.html`: descrição pública das nove regras e hipóteses legítimas a verificar.
 - `auditor.html`: ênfase em trabalho individual, revisão de achado e peça redigida.
 - `secretaria.html`: ênfase em capacidade, padronização, defensabilidade e custódia.
 - `seguranca.html`: limites técnicos, requisitos de infraestrutura e ressalvas de CTN/LGPD.
@@ -70,7 +69,7 @@ Antes de publicar mudanças de conteúdo, submeta alegações de resultado, text
 Todos os ativos usados na renderização estão em `assets/`. O portal não contém `@import`, fontes remotas, analytics, pixel, script externo ou imagem externa. Os únicos destinos externos são:
 
 - o ambiente de treinamento, aberto apenas por ação do leitor;
-- o endpoint do formulário, chamado apenas após envio e depois de configurado.
+- o endereço de e-mail de contato, acionado por `mailto:` somente quando o leitor prepara a mensagem.
 
 URLs de canonical, Open Graph e JSON-LD são metadados e não fazem requisição no carregamento da página.
 
@@ -142,7 +141,7 @@ Todas as leituras de rolagem passam por um `requestAnimationFrame` compartilhado
 | `index.html` | `Organization`, `WebSite`, `WebPage`, `SoftwareApplication`, `FAQPage` (8 perguntas) |
 | `como-funciona.html` | `Organization`, `SoftwareApplication`, `BreadcrumbList`, `FAQPage` |
 | `simples-nacional.html` | `Organization`, `SoftwareApplication`, `BreadcrumbList`, `FAQPage` |
-| `regras.html` | `Organization`, `SoftwareApplication`, `BreadcrumbList`, `ItemList` (10 regras) |
+| `regras.html` | `Organization`, `SoftwareApplication`, `BreadcrumbList`, `ItemList` (9 regras) |
 | `seguranca.html` | `Organization`, `SoftwareApplication`, `BreadcrumbList`, `FAQPage` |
 | `auditor.html` | `Organization`, `SoftwareApplication`, `Audience`, `BreadcrumbList` |
 | `secretaria.html` | `Organization`, `SoftwareApplication`, `Audience`, `BreadcrumbList` |
@@ -157,7 +156,7 @@ O `og:image` é `assets/img/og-tech-fisco.png` (1200 × 630). WhatsApp, LinkedIn
 O portal não define cabeçalhos; isso é responsabilidade do servidor ou do provedor.
 
 ```
-Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'self' https://SEU-ENDPOINT; frame-ancestors 'none'; base-uri 'self'
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'self' mailto:; frame-ancestors 'none'; base-uri 'self'
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
 Referrer-Policy: strict-origin-when-cross-origin
@@ -222,7 +221,7 @@ Valide novamente os nove arquivos HTML no serviço oficial do W3C, teste 360 px,
 Nesta ordem:
 
 1. Substituir `{{DOMINIO_DO_SITE}}` nas 9 páginas, em `robots.txt`, em `sitemap.xml` e em `site.webmanifest`.
-2. Substituir `{{ENDPOINT_FORMULARIO}}` em `contato.html` e testar um envio real, conferindo os estados de sucesso e de erro.
+2. Confirmar o destinatário em `contato.html` e testar a abertura de uma mensagem pelo botão **Preparar e-mail**.
 3. Resolver os três placeholders de prova (`{{PROVA_A_PREENCHER}}`, `{{DEPOIMENTO_A_PREENCHER}}`, `{{MUNICIPIO_CLIENTE_A_PREENCHER}}`) na home e em `secretaria.html`. Se ainda não houver caso autorizado, **remover as seções inteiras** — publicar uma moldura vazia com marcadores em vermelho custa mais credibilidade do que a ausência da seção.
 4. Configurar `404.html` como documento de erro do servidor.
 5. Aplicar os cabeçalhos HTTP e a política de cache descritos acima.

@@ -741,7 +741,7 @@ summary:hover::after { background-color: var(--border-soft); }
 .document__head { padding-bottom: 1rem; border-bottom: 2px solid #1b2635; text-align: center; }
 .document__seal { width: 48px; height: 48px; display: grid; place-items: center; margin: 0 auto .6rem; border: 2px solid #1b2635; border-radius: 50%; font-family: var(--font); font-weight: var(--w-black); }
 .document h3 { margin-top: 1.4rem; color: #1b2635; font-family: var(--font-serif); font-size: 1rem; text-align: center; text-transform: uppercase; letter-spacing: 0; }
-.document p { margin-top: .8rem; text-align: justify; hyphens: auto; }
+.document p { margin-top: .8rem; text-align: left; hyphens: none; overflow-wrap: anywhere; }
 .document table { margin-top: 1rem; font-family: var(--font); font-size: .66rem; }
 .document th, .document td { min-width: 68px; padding: .32rem; border: 1px solid #818b98; }
 .document__sign { width: 220px; margin: 3rem auto 0; padding-top: .4rem; border-top: 1px solid #1b2635; text-align: center; }
