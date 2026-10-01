@@ -49,7 +49,7 @@ Todos os placeholders usam chaves duplas e podem ser localizados com uma busca g
 | `{{DEPOIMENTO_A_PREENCHER}}` | Home e página da secretaria | Depoimento real, atribuível e autorizado |
 | `{{MUNICIPIO_CLIENTE_A_PREENCHER}}` | Home e página da secretaria | Nome ou marca institucional somente com autorização de uso |
 
-O formulário de contato está configurado para preparar uma mensagem destinada a `fredissimo@gmail.com`. O navegador abre o aplicativo de e-mail do visitante com assunto e corpo preenchidos; o usuário ainda precisa revisar e selecionar **Enviar**. Sem JavaScript, o formulário conserva a validação nativa e usa a ação `mailto:` diretamente.
+O formulário de contato está configurado para preparar uma mensagem destinada a `contato@techfisco.com.br`. O navegador abre o aplicativo de e-mail do visitante com assunto e corpo preenchidos; o usuário ainda precisa revisar e selecionar **Enviar**. Sem JavaScript, o formulário conserva a validação nativa e usa a ação `mailto:` diretamente.
 
 ## Onde ajustar o texto comercial
 
